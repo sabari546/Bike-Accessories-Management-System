@@ -1,0 +1,53 @@
+/* Background transparency if needed */
+#updateScene {
+    -fx-background-color: transparent;
+}
+
+/* All Labels - white color text */
+.label {
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* TextFields - simple styling */
+.text-field {
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 5 10 5 10;
+    -fx-font-size: 13px;
+}
+
+/* DatePicker styling */
+.date-picker {
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-font-size: 13px;
+}
+
+/* Button style */
+.button {
+    -fx-background-color: #006064;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+/* Button hover effect */
+.button:hover {
+    -fx-background-color: #00838f;
+}
+
+/* Update message Label (updateLabel) */
+#updateLabel {
+    -fx-text-fill: #ffeb3b; /* yellowish message color */
+    -fx-font-size: 16px;
+    -fx-font-style: italic;
+}

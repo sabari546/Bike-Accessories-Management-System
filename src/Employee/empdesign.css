@@ -1,0 +1,121 @@
+/* -----------------------------
+   Global AnchorPane Background
+------------------------------ */
+#AnchorPane {
+    -fx-background-color: linear-gradient(to bottom, #2c3e50, #34495e);
+}
+
+/* -----------------------------
+   Label Styling
+------------------------------ */
+.gridpane-selection {
+    -fx-background-color: rgba(255, 255, 255, 0.85);
+    -fx-border-color: #FFD700;
+    -fx-border-width: 2px;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 8, 0, 2, 2);
+}
+
+.label {
+    -fx-text-fill: #000000;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.label-border{
+    -fx-font-size: 22px;
+    -fx-border-color: grey
+}
+
+/* Header Label */
+.label:focused {
+    -fx-effect: dropshadow(gaussian, white, 2, 0.1, 0, 0);
+}
+
+/* -----------------------------
+   TableView Styling
+------------------------------ */
+.table-view {
+    -fx-background-color: #ecf0f1;
+    -fx-border-color: #FFD700;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-table-cell-border-color: #bdc3c7;
+}
+
+.product-display{
+     -fx-font-size: 18px;
+}
+/* Table header */
+.table-view .column-header-background {
+    -fx-background-color: #2c3e50;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 13px;
+    -fx-text-fill: red;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+    -fx-padding: 6px;
+}
+
+
+
+/* Table rows */
+.table-view .table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: #dfe6e9;
+}
+
+.table-view .table-row-cell:filled:selected, .table-view .table-row-cell:focused:selected {
+    -fx-background-color: #2980b9;
+    -fx-text-fill: white;
+}
+
+/* -----------------------------
+   TextField Styling
+------------------------------ */
+.text-field {
+    -fx-background-color: #ecf0f1;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 3px;
+    -fx-padding: 5px;
+    -fx-font-size: 13px;
+}
+
+/* -----------------------------
+   ComboBox Styling
+------------------------------ */
+.combo-box {
+    -fx-background-color: #ecf0f1;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 3px;
+    -fx-font-size: 13px;
+}
+
+/* -----------------------------
+   Button Styling
+------------------------------ */
+.button {
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+    -fx-padding: 8 15 8 15;
+}
+
+.button:hover {
+    -fx-background-color: #2ecc71;
+}
+
+#confirmSaleBtn {
+    -fx-background-color: #2980b9;
+}
+
+#confirmSaleBtn:hover {
+    -fx-background-color: #3498db;
+}

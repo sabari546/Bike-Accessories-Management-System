@@ -1,0 +1,100 @@
+/* ===========================
+   AnchorPane Overlay
+=========================== */
+#AnchorPane {
+    /* Transparent dark overlay on top of your blurred image */
+    -fx-background-color: rgba(0, 0, 0, 0.45);
+}
+
+/* ===========================
+   Title Label
+=========================== */
+#product-add-title{
+ -fx-font-size: 20px;   
+}
+
+/* ===========================
+   Labels
+=========================== */
+.label {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+/* ===========================
+   Text Fields
+=========================== */
+.text-field {
+    -fx-background-color: rgba(255,255,255,0.92);
+    -fx-border-color: #FFD700;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 6px;
+    -fx-font-size: 13px;
+}
+.text-field:focused {
+    -fx-border-color: #FFC857; /* Soft gold on focus */
+    -fx-background-color: white;
+}
+
+/* ===========================
+   Date Picker
+=========================== */
+.date-picker {
+    -fx-background-color: rgba(255,255,255,0.92);
+    -fx-border-color: #FFD700;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+}
+.date-picker:focused {
+    -fx-border-color: #FFC857;
+}
+
+/* ===========================
+   Combo Box
+=========================== */
+.combo-box {
+    -fx-background-color: rgba(255,255,255,0.92);
+    -fx-border-color: #FFD700;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+}
+.combo-box:focused {
+    -fx-border-color: #FFC857;
+}
+
+/* ===========================
+   Buttons - Base
+=========================== */
+.button {
+    -fx-background-radius: 8px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-padding: 6 15 6 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.45), 4, 0, 2, 2);
+}
+
+/* ===========================
+   Submit Button
+=========================== */
+#submitButton {
+    -fx-background-color: linear-gradient(to bottom, #FFD700, #B8860B);
+    -fx-text-fill: #8B0000; /* Deep red text */
+}
+#submitButton:hover {
+    -fx-background-color: linear-gradient(to bottom, #FFE766, #DAA520);
+    -fx-translate-y: -2px; /* Lift effect */
+}
+
+/* ===========================
+   Cancel Button
+=========================== */
+#cancel {
+    -fx-background-color: linear-gradient(to bottom, #8B0000, #660000);
+    -fx-text-fill: #FFD700;
+}
+#cancel:hover {
+    -fx-background-color: linear-gradient(to bottom, #A80000, #7B0000);
+    -fx-translate-y: -2px; /* Lift effect */
+}

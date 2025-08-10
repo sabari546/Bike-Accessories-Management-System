@@ -1,0 +1,51 @@
+/* Admin Scene Background */
+#ADMINsCENE {
+    -fx-background-color: linear-gradient(to right, #d7f9f9, #b2ebf2);
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* Top Toolbar (Welcome + Logout) */
+.tool-bar {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0.1, 0, 2);
+    -fx-padding: 5 10;
+    -fx-spacing: 20px;
+}
+
+/* All Labels in toolbars */
+.label {
+    -fx-text-fill: #004d40;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* Emoji labels (like 🏍️, ⚠️, 🏆) */
+.label:focused {
+    -fx-font-size: 14px;
+    -fx-text-fill: #00695c;
+}
+
+/* Buttons in Toolbar & GridPane */
+.button {
+    -fx-background-color: #009688;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-padding: 6 16;
+    -fx-cursor: hand;
+    -fx-font-size: 13px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 2, 0.1, 0, 1);
+}
+
+.button:hover {
+    -fx-background-color: #004d40;
+}
+
+/* Main content panel (empty now but styled in advance) */
+#mainpane {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 8, 0.2, 0, 4);
+    -fx-padding: 15;
+}

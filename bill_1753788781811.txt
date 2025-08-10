@@ -1,0 +1,9 @@
+        ***** Bike Accessories Store *****
+Date: 2025-07-29T17:03:01.676
+--------------------------------------------
+Product              Qty   Total  
+Vega Crux DX Helmet  1     1800.00
+--------------------------------------------
+Total Amount: ₹1800.00
+Scan QR below or use UPI ID to pay.
+Thank you! Visit Again.

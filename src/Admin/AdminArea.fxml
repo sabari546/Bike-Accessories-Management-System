@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="ADMINsCENE" prefHeight="986.0" prefWidth="1436.0" stylesheets="@adminsceneDesign.css" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.AdminAreaController">
+   <children>
+      <ImageView fitHeight="986.0" fitWidth="1436.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/PSP05337.JPG" />
+         </image>
+      </ImageView>
+      <ToolBar layoutX="12.0" layoutY="14.0" prefHeight="36.0" prefWidth="1412.0">
+         <items>
+            <Label prefHeight="24.0" prefWidth="1222.0" text="Welcome, Admin" />
+            <Button fx:id="logoutButton" alignment="TOP_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#logoutButton" prefHeight="26.0" prefWidth="142.0" text="Logout" />
+         </items>
+      </ToolBar>
+      <ToolBar layoutX="19.0" layoutY="70.0" prefHeight="48.0" prefWidth="1394.0">
+         <items>
+            <Label alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="138.0" text="🏍️Total Products :" textAlignment="RIGHT">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalProd" prefHeight="20.0" prefWidth="137.0" />
+            <Pane prefHeight="38.0" prefWidth="24.0" />
+            <Label prefHeight="20.0" prefWidth="129.0" text="⚠️Low Stock :" />
+            <Label fx:id="LowStockStatus" prefHeight="20.0" prefWidth="350.0" />
+            <Button mnemonicParsing="false" onAction="#lowStockBtn" text="click here!" />
+            <Label prefHeight="20.0" prefWidth="162.0" text="🏆Today's Sales : " />
+            <Label fx:id="todaySales" prefHeight="18.0" prefWidth="160.0" />
+         </items>
+      </ToolBar>
+      <AnchorPane fx:id="mainpane" layoutX="69.0" layoutY="193.0" />
+      <GridPane layoutX="224.0" layoutY="148.0" prefHeight="26.0" prefWidth="1057.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Button fx:id="addProduct" mnemonicParsing="false" onAction="#addproductButton" prefHeight="26.0" prefWidth="150.0" text="Add Product" />
+            <Button fx:id="viewInventory" mnemonicParsing="false" onAction="#onViewInventoryClick" prefHeight="26.0" prefWidth="158.0" text="View Inventory" GridPane.columnIndex="1" />
+            <Button fx:id="viewsales" mnemonicParsing="false" onAction="#handleSalesReport" prefHeight="26.0" prefWidth="165.0" text="View sales report" GridPane.columnIndex="2" />
+            <Button fx:id="manageEmp" mnemonicParsing="false" onAction="#handleManageEmployee" prefHeight="26.0" prefWidth="190.0" text="Manage Employees" GridPane.columnIndex="3" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

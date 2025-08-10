@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1366.0" stylesheets="@manageEmpDesign.css" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.ManageEmpController">
+   <children>
+      <ImageView fitHeight="768.0" fitWidth="1366.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/pexels-rovenimages-com-344613-949587.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="27.0" layoutY="77.0" prefHeight="674.0" prefWidth="1330.0">
+         <children>
+            <SplitPane dividerPositions="0.22157663316582912" layoutX="9.0" layoutY="20.0" prefHeight="637.0" prefWidth="1314.0" stylesheets="@manageEmpDesign.css">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="622.0" prefWidth="292.0">
+                     <children>
+                        <VBox layoutX="24.0" layoutY="41.0" prefHeight="238.0" prefWidth="244.0">
+                           <children>
+                              <Label text="Name" />
+                              <TextField fx:id="empInputName" promptText="enter you name here.." />
+                              <Pane prefHeight="200.0" prefWidth="200.0" />
+                              <Label text="Gender" />
+                              <RadioButton fx:id="femaleRadio" mnemonicParsing="false" onAction="#handlefemaleRadio" text="Female" />
+                              <Pane prefHeight="200.0" prefWidth="200.0" />
+                              <RadioButton fx:id="maleRadio" mnemonicParsing="false" onAction="#handleMaleRadio" text="Male" />
+                              <Pane prefHeight="200.0" prefWidth="200.0" />
+                              <Label text="Ph no:" />
+                              <TextField fx:id="empPhInput" />
+                              <Pane prefHeight="200.0" prefWidth="200.0" />
+                              <Label text="Role" />
+                              <ComboBox fx:id="Emprolebox" prefWidth="150.0" />
+                              <Pane prefHeight="200.0" prefWidth="200.0" />
+                              <Label text="Date" />
+                              <DatePicker fx:id="joinDatePicker" />
+                           </children>
+                        </VBox>
+                        <Label alignment="CENTER" layoutX="69.0" layoutY="327.0" prefHeight="34.0" prefWidth="150.0" text="Create user for login">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <GridPane layoutX="18.0" layoutY="371.0" prefHeight="50.0" prefWidth="256.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TextField fx:id="createpass" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="createUser" GridPane.columnIndex="1" />
+                              <Label prefHeight="18.0" prefWidth="70.0" text="Username" />
+                              <Label text="Password" GridPane.rowIndex="2" />
+                              <Pane prefHeight="0.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                        <VBox alignment="CENTER" layoutX="74.0" layoutY="455.0" prefHeight="168.0" prefWidth="82.0">
+                           <children>
+                              <Button fx:id="adduser" mnemonicParsing="false" onAction="#handleAddUSer" text="Add" />
+                              <Pane prefHeight="259.0" prefWidth="100.0" />
+                              <Button fx:id="updateUserbtn" mnemonicParsing="false" onAction="#handleUpdateUser" text="Update" />
+                              <Pane prefHeight="259.0" prefWidth="100.0" />
+                              <Button fx:id="deleteUserbtn" mnemonicParsing="false" onAction="#handledeleteUser" text="Delete" />
+                              <Pane prefHeight="259.0" prefWidth="100.0" />
+                              <Button fx:id="clearbtn" mnemonicParsing="false" onAction="#handleclearemp" text="Clear" />
+                           </children>
+                        </VBox>
+                        <Text layoutX="23.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter details here :" wrappingWidth="185.33669662475586">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <TableView fx:id="EmpTable" prefHeight="622.0" prefWidth="952.0">
+                    <columns>
+                      <TableColumn fx:id="empid" prefWidth="104.79998779296875" text="ID">
+                          <cellValueFactory>
+                              <javafx.scene.control.cell.PropertyValueFactory property="empid" />
+                           </cellValueFactory>
+                      </TableColumn>
+                      <TableColumn fx:id="EmpName" prefWidth="122.39999389648438" text="Name">
+                          <cellValueFactory>
+                              <javafx.scene.control.cell.PropertyValueFactory property="empname" />
+                          </cellValueFactory>
+                          </TableColumn>
+                        <TableColumn fx:id="empGender" prefWidth="111.20001220703125" text="Gender">
+                        <cellValueFactory>
+                              <javafx.scene.control.cell.PropertyValueFactory property="gender" />
+                          </cellValueFactory>
+                          </TableColumn>
+                        <TableColumn fx:id="empPh" prefWidth="125.5999755859375" text="PhoneNo">
+                        <cellValueFactory>
+                              <javafx.scene.control.cell.PropertyValueFactory property="phoneno" />
+                          </cellValueFactory>
+                          </TableColumn>
+                        <TableColumn fx:id="empRole" prefWidth="105.5999755859375" text="Role">
+                        <cellValueFactory>
+                              <javafx.scene.control.cell.PropertyValueFactory property="role" />
+                          </cellValueFactory>
+                          </TableColumn>
+                        <TableColumn fx:id="empJoinDate" prefWidth="129.5999755859375" text="JoinDate">
+                        <cellValueFactory>
+                              <javafx.scene.control.cell.PropertyValueFactory property="joindate" />
+                          </cellValueFactory>
+                          </TableColumn>
+                        <TableColumn fx:id="empUsernam" prefWidth="148.0" text="username">
+                        <cellValueFactory>
+                              <javafx.scene.control.cell.PropertyValueFactory property="username" />
+                          </cellValueFactory>
+                          </TableColumn>
+                        <TableColumn fx:id="emppassW" prefWidth="139.99995117187495" text="password">
+                        <cellValueFactory>
+                              <javafx.scene.control.cell.PropertyValueFactory property="password" />
+                          </cellValueFactory>
+                          </TableColumn>
+                    </columns>
+                  </TableView>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="463.0" layoutY="14.0" prefHeight="50.0" prefWidth="474.0">
+         <children>
+            <Text fill="#f2ecec" fontSmoothingType="LCD" layoutX="89.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Management Dashboard" textAlignment="CENTER" wrappingWidth="296.79996337890634">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

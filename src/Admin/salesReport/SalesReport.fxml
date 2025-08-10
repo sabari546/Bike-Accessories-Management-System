@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" stylesheets="@salesrepDesign.css" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.salesReport.SalesReportController">
+   <children>
+      <TilePane alignment="CENTER" layoutX="431.0" layoutY="14.0">
+         <children>
+            <Label styleClass="report-title" text="Sales Report" />
+         </children>
+      </TilePane>
+      <SplitPane dividerPositions="0.24309392265193366" layoutX="42.0" layoutY="71.0" prefHeight="686.0" prefWidth="1202.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="682.0" prefWidth="282.0" styleClass="leftanchor">
+               <children>
+                  <VBox alignment="CENTER" layoutX="56.0" layoutY="35.0" prefHeight="195.0" prefWidth="216.0">
+                     <children>
+                        <Label text="From : " />
+                        <DatePicker fx:id="fromDate" />
+                        <Pane prefHeight="11.0" prefWidth="174.0" />
+                        <Label text="To : " />
+                        <DatePicker fx:id="toDate" />
+                        <Pane prefHeight="27.0" prefWidth="174.0" />
+                        <Button fx:id="FilterButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#filterbydate" prefHeight="36.0" prefWidth="110.0" text="Filter" />
+                     </children>
+                  </VBox>
+                  <ButtonBar layoutX="70.0" layoutY="266.0">
+                     <buttons>
+                        <Label text="Total sales :" />
+                        <Label fx:id="totalsalesLabel" opacity="0.93" prefHeight="18.0" prefWidth="77.0" text="0.00" />
+                     </buttons>
+                  </ButtonBar>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="666.0" prefWidth="1003.0" styleClass="sales-back-anchor">
+               <children>
+                  <TableView fx:id="salesTable" layoutX="44.0" layoutY="39.0" prefHeight="609.0" prefWidth="822.0" stylesheets="@salesrepDesign.css">
+                    <columns>
+                      <TableColumn fx:id="orderidCol" prefWidth="127.19998168945312" text="order id">
+                          <cellValueFactory>
+                                    <javafx.scene.control.cell.PropertyValueFactory property="saleId" />
+                          </cellValueFactory>
+                      </TableColumn>
+                      <TableColumn fx:id="productCol" prefWidth="235.9999237060547" text="product">
+                          <cellValueFactory>
+                                    <javafx.scene.control.cell.PropertyValueFactory property="productName" />
+                           </cellValueFactory>
+                      </TableColumn>
+                        <TableColumn fx:id="quantityCol" minWidth="5.5999755859375" prefWidth="135.99993896484375" text="quantity">
+                            <cellValueFactory>
+                                    <javafx.scene.control.cell.PropertyValueFactory property="quantitySold" />
+                                 </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="amountCol" minWidth="6.4000244140625" prefWidth="167.99993896484375" text="amount ">
+                            <cellValueFactory>
+                                    <javafx.scene.control.cell.PropertyValueFactory property="totalAmount" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="dateCol" minWidth="0.0" prefWidth="153.5999755859375" text="date">
+                            <cellValueFactory>
+                                    <javafx.scene.control.cell.PropertyValueFactory property="saleDate" />
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

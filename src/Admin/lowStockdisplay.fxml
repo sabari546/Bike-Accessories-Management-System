@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="474.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.LowStockdisplayController">
+   <children>
+      <TableView fx:id="lowStocktable" layoutX="107.0" layoutY="99.0" prefHeight="474.0" prefWidth="713.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="colid" prefWidth="64.00000303983688" text="Id">
+              <cellValueFactory> <javafx.scene.control.cell.PropertyValueFactory property="Id" /></cellValueFactory>
+           </TableColumn>
+          <TableColumn fx:id="colname" prefWidth="202.3999481201172" text="name">
+              <cellValueFactory> <javafx.scene.control.cell.PropertyValueFactory property="name" /></cellValueFactory>
+          </TableColumn>
+            <TableColumn fx:id="colCat" minWidth="0.0" prefWidth="220.800048828125" text="category">
+                <cellValueFactory> <javafx.scene.control.cell.PropertyValueFactory property="category" /></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="calPrice" minWidth="0.0" prefWidth="120.0" text="price">
+                <cellValueFactory> <javafx.scene.control.cell.PropertyValueFactory property="price" /></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="colStock" minWidth="0.0" prefWidth="110.40008544921875" text="stock">
+                <cellValueFactory> <javafx.scene.control.cell.PropertyValueFactory property="stock" /></cellValueFactory>
+            </TableColumn>
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
